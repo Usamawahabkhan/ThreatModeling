@@ -1,0 +1,40 @@
+graph TD;
+
+%% External Entities
+A[Patient] -->|Login & Request Medical Data| B[Frontend Web Application]
+C[Doctor] -->|Access Patient Records & Approve Requests| B
+D[Third-Party Services] -->|API Calls Billing, Insurance| F[Backend API]
+X[Attacker] -->|Attempt Credential Theft| B
+
+%% Internal Components
+B -->|Authenticate User Requests| E[Authentication Server]
+B -->|Schedule Appointments| F
+F -->|Process Patient Data| G[Medical Database]
+E -->|Verify Credentials| G
+F -->|Billing Operations| H[Payment Gateway]
+G -->|Securely Store Medical Records| J[Cloud Storage]
+H -->|Process Payments| K[Banking System]
+Y[Attacker] -->|Try API Exploitation| F
+
+%% Trust Boundaries
+subgraph Public_Zone
+    A
+    C
+    D
+    X
+end
+
+subgraph Private_Zone
+    B
+    E
+    F
+    G
+    H
+    J
+    K
+end
+
+%% STRIDE Threats
+style X fill:#FFAAAA,stroke:#000000,stroke-width:2px
+style Y fill:#FFAAAA,stroke:#000000,stroke-width:2px
+style B fill:#FFC857,stroke:#

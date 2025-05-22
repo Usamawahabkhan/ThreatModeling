@@ -1,0 +1,33 @@
+
+graph TD
+    subgraph Public Zone
+        A[Patient Web Portal]
+    end
+
+    subgraph Doctor Zone
+        B[Doctor Dashboard]
+        B -->|Uses| C[API Gateway]
+    end
+
+    subgraph Internal Zone
+        C -->|Calls| D[Business Logic Services]
+        D -->|Accesses| E[Database]
+        D -->|Logs to| F[Logging Service]
+    end
+
+    subgraph Secure Zone
+        E[Database]
+        F[Logging Service]
+    end
+
+    subgraph External Zone
+        G[Pharmacy API]
+        H[Insurance API]
+    end
+
+    A -->|Login| I[Auth Service]
+    I -->|Issues Token| A
+    A -->|Access| C
+    B -->|Access| C
+    C -->|Calls| G
+    C -->|Calls| H

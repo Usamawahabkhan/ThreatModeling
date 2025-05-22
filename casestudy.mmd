@@ -1,0 +1,17 @@
+graph TD
+    A[External User] -->|Authentication Request| B[Access Point]
+    B -->|Encrypted Connection| C[Network Firewall]
+    C -->|Traffic Routing| D[HPE Aruba Networking Central]
+    D -->|Threat Detection| E[Security Monitoring System]
+    
+    subgraph Security Mechanisms
+        F[Multi-Factor Authentication] --> B
+        G[End-to-End Encryption] --> C
+        H[Firewall & IDS] --> C
+        I[Role-Based Access Control] --> E
+    end
+    
+    E -->|Alerts & Logs| J[Admin Dashboard]
+    J -->|Mitigation Actions| K[Incident Response System]
+    
+    K -->|Update Security Policies| L[Secure Network]

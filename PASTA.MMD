@@ -1,0 +1,24 @@
+graph TD
+    A[Define Objectives] -->|Set Security Goals| B[Define Technical Scope]
+    B -->|Identify Components| C[Decompose Application]
+    C -->|Break Down Architecture| D[Analyze Threats]
+    D --> E{Threat Categories}
+    
+    E -->|Spoofing| F[Unauthorized Device Access]
+    E -->|Tampering| G[Data Manipulation]
+    E -->|Denial of Service| H[Network Overload]
+    E -->|Information Disclosure| I[Data Leak]
+    E -->|Elevation of Privilege| J[Unauthorized Control]
+    
+    F --> K[Multi-Factor Authentication]
+    G --> L[Cryptographic Hashing]
+    H --> M[Rate Limiting & Firewall]
+    I --> N[End-to-End Encryption]
+    J --> O[Role-Based Access Control]
+    
+    K --> P[Secure Device Communication]
+    L --> P
+    M --> P
+    N --> P
+    O --> P
+    P --> Q[Risk Mitigation & Secure Network]

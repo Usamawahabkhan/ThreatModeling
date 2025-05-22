@@ -1,0 +1,102 @@
+<mxfile host="app.diagrams.net">
+    <diagram name="ATM Security Flow" id="1">
+        <mxGraphModel dx="1000" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <!-- Nodes -->
+                <mxCell id="A" value="External Attacker" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="40" width="140" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="B" value="SecureNet Employee" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="40" width="140" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="C" value="Network Firewall" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="120" width="140" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="D" value="HPE Aruba Networking Central" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="520" y="120" width="180" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="E" value="Security Monitoring System" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="760" y="120" width="180" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="F" value="Incident Response Team" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1000" y="120" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="G" value="Multi-Factor Authentication" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="320" y="-40" width="180" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="H" value="End-to-End Encryption" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="520" y="40" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="I" value="Firewall &amp; IDS" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="180" y="120" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="J" value="Role-Based Access Control" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="760" y="40" width="180" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="K" value="Secure Network Policies" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1200" y="120" width="180" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="L" value="Updated Security Infrastructure" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="1440" y="120" width="200" height="40" as="geometry"/>
+                </mxCell>
+                <!-- Edges -->
+                <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;" edge="1" parent="1" source="A" target="B">
+                    <mxGeometry relative="1" as="geometry"/>
+                    <mxCell value="Phishing Attack" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="e1">
+                        <mxGeometry x="0.5" y="0" width="80" height="20" as="geometry" relative="1"/>
+                    </mxCell>
+                </mxCell>
+                <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;" edge="1" parent="1" source="A" target="C">
+                    <mxGeometry relative="1" as="geometry"/>
+                    <mxCell value="Malware Injection" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="e2">
+                        <mxGeometry x="0.5" y="0" width="80" height="20" as="geometry" relative="1"/>
+                    </mxCell>
+                </mxCell>
+                <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;" edge="1" parent="1" source="C" target="D">
+                    <mxGeometry relative="1" as="geometry"/>
+                    <mxCell value="Traffic Filtering" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="e3">
+                        <mxGeometry x="0.5" y="0" width="80" height="20" as="geometry" relative="1"/>
+                    </mxCell>
+                </mxCell>
+                <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;" edge="1" parent="1" source="D" target="E">
+                    <mxGeometry relative="1" as="geometry"/>
+                    <mxCell value="Threat Detection" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="e4">
+                        <mxGeometry x="0.5" y="0" width="80" height="20" as="geometry" relative="1"/>
+                    </mxCell>
+                </mxCell>
+                <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;" edge="1" parent="1" source="E" target="F">
+                    <mxGeometry relative="1" as="geometry"/>
+                    <mxCell value="Generate Alerts" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="e5">
+                        <mxGeometry x="0.5" y="0" width="80" height="20" as="geometry" relative="1"/>
+                    </mxCell>
+                </mxCell>
+                <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;" edge="1" parent="1" source="G" target="B">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;" edge="1" parent="1" source="H" target="D">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;" edge="1" parent="1" source="I" target="C">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;" edge="1" parent="1" source="J" target="E">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e10" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;" edge="1" parent="1" source="F" target="K">
+                    <mxGeometry relative="1" as="geometry"/>
+                    <mxCell value="Mitigation Actions" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="e10">
+                        <mxGeometry x="0.5" y="0" width="80" height="20" as="geometry" relative="1"/>
+                    </mxCell>
+                </mxCell>
+                <mxCell id="e11" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;" edge="1" parent="1" source="K" target="L">
+                    <mxGeometry relative="1" as="geometry"/>
+                    <mxCell value="Continuous Monitoring" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;" vertex="1" parent="e11">
+                        <mxGeometry x="0.5" y="0" width="80" height="20" as="geometry" relative="1"/>
+                    </mxCell>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

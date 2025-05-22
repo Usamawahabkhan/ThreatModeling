@@ -1,0 +1,40 @@
+
+graph TD
+    subgraph Public Zone
+        A[Frontend: Web Portal]
+    end
+    
+    subgraph Internal Zone
+        B[Backend: RESTful APIs]
+        C[Doctor Dashboard]
+    end
+    
+    subgraph Secure Zone
+        D[Database: Patient Data]
+        E[Logging Service: Audit Logs]
+    end
+    
+    subgraph External Zone
+        F[Pharmacy API]
+        G[Insurance API]
+    end
+    
+    A -->|Patient Login| B
+    B -->|Token Issued| A
+    C -->|View Patient Record| B
+    B -->|Access Patient Data| D
+    B -->|Store Audit Logs| E
+    B -->|Send Prescription| F
+    F -->|Confirmation| B
+    B -->|Verify Insurance| G
+    G -->|Response| B
+    
+    classDef publicZone fill:#f9f,stroke:#333,stroke-width:2px;
+    classDef internalZone fill:#bbf,stroke:#333,stroke-width:2px;
+    classDef secureZone fill:#bfb,stroke:#333,stroke-width:2px;
+    classDef externalZone fill:#ffb,stroke:#333,stroke-width:2px;
+    
+    class A publicZone;
+    class B,C internalZone;
+    class D,E secureZone;
+    class F,G externalZone;
